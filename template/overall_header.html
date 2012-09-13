@@ -81,7 +81,7 @@
     var imagesetLang = '{T_IMAGESET_LANG_PATH}';
 // ]]>
 </script>
-<script type="text/javascript" src="{T_TEMPLATE_PATH}/jquery-1.7.1.min.js"></script>
+
 <!--[if lte IE 8]><script type="text/javascript"> var oldIE = true; </script><![endif]-->
 <script type="text/javascript" src="{T_TEMPLATE_PATH}/style.js"></script>
 <script type="text/javascript" src="{T_TEMPLATE_PATH}/forum_fn.js"></script>
@@ -145,7 +145,7 @@
 </script>
 <script type="text/javascript" src="{T_TEMPLATE_PATH}/editor.js"></script>
 <!-- ENDIF -->
-
+<!-- INCLUDE dkp/dkpheader.html -->
 </head>
 
 <body id="phpbb" class="section-{SCRIPT_NAME} {S_CONTENT_DIRECTION}">
@@ -198,8 +198,10 @@
     </div>
 
     <div class="nav-links">
+	    <a href="{U_PORTAL}"><span>{L_PORTAL}</span></a>
         <a href="{U_INDEX}" accesskey="h"><span>{L_INDEX}</span></a> 
         <!-- BEGIN navlinks --><a href="{navlinks.U_VIEW_FORUM}"><span>{navlinks.FORUM_NAME}</span></a><!-- END navlinks -->
+        <a href="{U_DKP}"><span>{L_DKPPAGE}</span></a><!-- BEGIN dkpnavlinks --> <a href="{dkpnavlinks.U_DKPPAGE}"><span>{dkpnavlinks.DKPPAGE}</span></a><!-- END dkpnavlinks -->
     </div>
     
     <!-- IF S_USER_LOGGED_IN and S_DISPLAY_PM and S_USER_NEW_PRIVMSG -->
