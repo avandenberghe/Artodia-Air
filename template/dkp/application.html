@@ -348,12 +348,13 @@ function classracestateChanged()
 // ]]>
 </script>
 <script type="text/javascript" src="{T_TEMPLATE_PATH}/editor.js"></script>
-
+<div id="bbdkpmain">
 <h2>{L_APPLY_TITLE}</h2>
-<div class="panel bg1" >
+<div class="panel bg1" style="width:60%" >
 <div class="inner"  >
 <span class="corners-top"><span></span></span>
-{WELCOME_MSG}
+<p>{WELCOME_MSG}</p>
+
 <!-- IF ERROR -->
 <fieldset class="fields1">
 <center><span class="genmed1 error">{ERROR}</span></center><br/>
@@ -373,21 +374,21 @@ function classracestateChanged()
 <fieldset class="fields2">	
 
 <dl>
-	<dt><strong>{L_APPLY_ACP_CHARNAME}</strong></dt>
+	<dt>{L_APPLY_ACP_CHARNAME}</dt>
 	<dd><input type="text" name="candidate_name" size="25" maxlength="25" class="input" /> <span style="color:red">{L_MANDATORY}</span> </dd>
 </dl>
 <dl>
-	<dt><strong>{L_APPLY_ACP_REALM}</strong></dt>
+	<dt>{L_APPLY_ACP_REALM}</dt>
 	<dd><input type="text" name="candidate_realm" size="25" maxlength="25" class="input" /> <span style="color:red">{L_MANDATORY}</span> </dd>
 </dl>
 
 <dl>
-    <dt><strong>{L_APPLY_LEVEL}</strong></dt>
+    <dt>{L_APPLY_LEVEL}</dt>
 	<dd><input type="text" name="candidate_level" size="3" maxlength="3" value="{MEMBER_LEVEL}" class="input" /> <span style="color:red">{L_MANDATORY}</span> </dd>
 </dl> 
  
 <dl>
-    <dt><strong>{L_GAME}:</strong></dt>
+    <dt>{L_GAME}:</dt>
   	 <dd>
   	  <div>
   		<select name="game_id" class="input" onchange="return GetClassRace(this.value)">
@@ -414,7 +415,7 @@ function classracestateChanged()
 </dl>
 
 <dl>
-    <dt><strong>{L_GENDER}:</strong></dt>
+    <dt>{L_GENDER}:</dt>
     <dd>
     <input type="radio" name="candidate_gender"  value="0"{MALE_CHECKED} /> {L_MALE}&nbsp;&nbsp;
     <input type="radio" name="candidate_gender"  value="1"{FEMALE_CHECKED} /> {L_FEMALE}
@@ -436,7 +437,7 @@ function classracestateChanged()
 
 <!-- BEGIN apptemplate -->
 <dl>
-	<dt><strong>{apptemplate.TITLE}</strong></dt>
+	<dt>{apptemplate.TITLE}</dt>
 	<dd>{apptemplate.QUESTION}
 	<!-- IF apptemplate.S_MANDATORY -->
 		&nbsp;<span style="color:red">{L_MANDATORY}</span>
@@ -562,6 +563,8 @@ function classracestateChanged()
 			</fieldset>
 <span class="corners-bottom"><span></span></span>
 </div>
+</div>
+
 </div>
 	
 
