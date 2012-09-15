@@ -5,30 +5,27 @@
 <!-- Credits : the Stats page uses Flot from http://code.google.com/p/flot/ -->
 
 
-<div class="forumlist" >
-<div class="catglow">
-	<div class="cathead-m">	
-		<div class="cathead-r">
-			<div class="cathead-l">
-				<div style="float: left; width:40%; white-space:nowrap;">{L_MENU_STATS}</div>
-				<div style="float: left; width:10%; white-space:nowrap;">				
-				 {L_POOL}:
-				</div> 
-				<div style="float: left; width:50%; white-space:nowrap;">
-					<div style="color:white; text-align:left; white-space:nowrap;">
-						<form id="stats" method="post" action="{U_STATS}">
-					      	<select id="pool" name="pool" class="input" onchange="javascript:form.submit();" style="padding:1px">
-					        <!-- BEGIN pool_row -->
-					        <option value="{pool_row.VALUE}" {pool_row.SELECTED}{pool_row.DISABLED}>{pool_row.OPTION}</option>
-		    	    		<!-- END pool_row -->
-					      	</select>
-				    	</form>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+<h2>{L_MENU_STATS}</h2>
+<br />
 
+<div style="float: left; width:15%; white-space:nowrap;">
+<h3>{L_POOL}:</h3>
+</div>
+<div style="float: left; width:70%; white-space:nowrap;">
+	<div style="color:white; text-align:left; white-space:nowrap;">
+		<form id="stats" method="post" action="{U_STATS}">
+	      	<select id="pool" name="pool" class="input" onchange="javascript:form.submit();" style="padding:1px">
+	        <!-- BEGIN pool_row -->
+	        <option value="{pool_row.VALUE}" {pool_row.SELECTED}{pool_row.DISABLED}>{pool_row.OPTION}</option>
+  	    		<!-- END pool_row -->
+	      	</select>
+    	</form>
+	</div>
+</div>
+
+
+<div style="clear: both;"></div>
+<br />
 <!--  Member statistics -->
 <h3>&nbsp;{L_MEMBERS}</h3>
 
@@ -583,8 +580,5 @@ jQuery(function () {
 
 
 <span class="corners-bottom"><span></span></span>
-</div>
-</div>
-
 </div>
 </div>

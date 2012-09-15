@@ -1,41 +1,33 @@
-<div class="forumlist" >
-<div class="catglow">
-	<div class="cathead-m">	
-		<div class="cathead-r">
-			<div class="cathead-l">
-				<div style="float:left; width: 40%;">
-				{L_GUILDROSTER}   {GUILDNAME}
-				</div>
-				<div style="float:left; width: 30%;">
-					<!-- IF S_MULTIGAME -->
-					<div style="float:left; width: 50%;">
-						<form method="post" action="{F_ROSTER}">
-							 <select name="displaygame" class="input" onchange="javascript:form.submit();" style="padding:1px">
-						        <!-- BEGIN game_row -->
-							        <option value="{game_row.VALUE}"{game_row.SELECTED}>{game_row.OPTION}</option>
-						        <!-- END game_row -->
-						    </select>
-	        			</form>
-		 			</div>
-				 	<!-- ENDIF -->
-			   </div> 
-	
-				<div style="float:left; width: 30%;">
-			    	<!-- IF S_RSTYLE == 1 -->
-			    	<a href="{U_LIST_MEMBERS0}">{L_NAME}</a> - 
-					<!-- IF S_RSTYLE == 0 -->
-			   		<a href="{U_LIST_MEMBERS1}">{L_CLASS}</a> -
-					<!-- ENDIF --> 
-			    	<a href="{U_LIST_MEMBERS2}">{L_RANK}</a> -
-			    	<a href="{U_LIST_MEMBERS3}">{L_LVL}</a> 
-			   		<!-- IF S_SHOWACH == 1 -->- <a href="{U_LIST_MEMBERS4}">{L_ACHIEV}</a> 
-					<!-- ENDIF -->
-					<!-- ENDIF -->
-				</div>
-			</div>
-		</div>
-	</div>
 
+<div style="float:left; width: 40%;">
+	<h2>{L_GUILDROSTER}   {GUILDNAME}</h2>
+</div>
+<div style="float:left; width: 30%;">
+	<!-- IF S_MULTIGAME -->
+	<div style="float:left; width: 50%;">
+		<form method="post" action="{F_ROSTER}">
+			 <select name="displaygame" class="input" onchange="javascript:form.submit();" style="padding:1px">
+		        <!-- BEGIN game_row -->
+			        <option value="{game_row.VALUE}"{game_row.SELECTED}>{game_row.OPTION}</option>
+		        <!-- END game_row -->
+		    </select>
+		</form>
+	</div>
+<!-- ENDIF -->
+</div> 
+	
+<div style="float:left; width: 30%;">
+   	<!-- IF S_RSTYLE == 1 -->
+   	<a href="{U_LIST_MEMBERS0}">{L_NAME}</a> - 
+	<!-- IF S_RSTYLE == 0 -->
+	<a href="{U_LIST_MEMBERS1}">{L_CLASS}</a> -
+	<!-- ENDIF --> 
+   	<a href="{U_LIST_MEMBERS2}">{L_RANK}</a> -
+   	<a href="{U_LIST_MEMBERS3}">{L_LVL}</a> 
+	<!-- IF S_SHOWACH == 1 -->- <a href="{U_LIST_MEMBERS4}">{L_ACHIEV}</a> 
+	<!-- ENDIF -->
+	<!-- ENDIF -->
+</div>
 
 <!-- 
 **************
@@ -282,7 +274,4 @@ grid layout
   </tr>
 </table>
 <span class="corners-bottom"><span></span></span>
-</div>
-
-</div>
 </div>

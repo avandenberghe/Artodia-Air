@@ -1,15 +1,25 @@
 <div class="forumbg forumbg-table">
 <div class="inner"><span class="corners-top"><span></span></span>
 <table class="table1" cellspacing="1" cellpadding="0">
+ <thead>
     <tr>
-      <td style="width: 14%; height: 24px; text-align: center" class="bg4">{D0}</td>
-      <td style="width: 14%; height: 24px; text-align: center" class="bg4">{D1}</td>
-      <td style="width: 14%; height: 24px; text-align: center" class="bg4">{D2}</td>
-      <td style="width: 14%; height: 24px; text-align: center" class="bg4">{D3}</td>
-      <td style="width: 14%; height: 24px; text-align: center" class="bg4">{D4}</td>
-      <td style="width: 14%; height: 24px; text-align: center" class="bg4">{D5}</td>
-      <td style="width: 14%; height: 24px; text-align: center" class="bg4">{D6}</td>
+      <th style="width: 14%; height: 24px; text-align: center"><h4>{D0}</h4></th>
+      <th style="width: 14%; height: 24px; text-align: center"><h4>{D1}</h4></th>
+      <th style="width: 14%; height: 24px; text-align: center"><h4>{D2}</h4></th>
+      <th style="width: 14%; height: 24px; text-align: center"><h4>{D3}</h4></th>
+      <th style="width: 14%; height: 24px; text-align: center"><h4>{D4}</h4></th>
+      <th style="width: 14%; height: 24px; text-align: center"><h4>{D5}</h4></th>
+      <th style="width: 14%; height: 24px; text-align: center"><h4>{D6}</h4></th>
     </tr>
+ </thead>
+ <tfoot>
+	<tr>
+		<th class="footer" colspan=0 style="text-align: left; white-space: nowrap; color:white;" colspan="0">
+			<!-- IF ! .raidplans -->{L_NO_RAIDS_SCHEDULED}<!-- ELSE --><!-- ENDIF -->
+		</th>
+	</tr>
+  </tfoot>  
+    <tbody>  
     <!-- BEGIN calendar_days -->
     <!-- IF calendar_days.START_WEEK --><tr style="height: 100px"><!-- ENDIF -->
       <!-- IF calendar_days.DUMMY_DAY -->
@@ -50,6 +60,7 @@
     <!-- IF calendar_days.END_WEEK --></tr><!-- ENDIF -->
 
     <!-- END calendar_days -->
-  </table>
-  <span class="corners-bottom"><span></span></span></div>
-  </div>
+	</tbody>
+	</table>
+	<span class="corners-bottom"><span></span></span></div>
+</div>

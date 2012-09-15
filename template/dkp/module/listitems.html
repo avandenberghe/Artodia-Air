@@ -1,32 +1,26 @@
-<div class="forumlist" >
-<div class="catglow">
-	<div class="cathead-m">	
-		<div class="cathead-r">
-			<div class="cathead-l">
-				<div style="float: left; width:40%">
-					<!-- IF S_HISTORY -->
-					{L_MENU_ITEMHIST}
-					 <!-- ELSE -->
-					{L_MENU_ITEMVAL}
-					<!-- ENDIF -->
-				</div>
-				<div style="float: left; width:10%">{L_POOL}:
-				</div>
-				<div style="float: left; width:40%">
-					<div style="color:white; text-align:left; white-space:nowrap;">
-					  <form method="post" action="{F_LISTITEM}">
-			    	  <select id="pool" name="pool" class="input" onchange="javascript:form.submit();" style="padding:1px;">
-					        <!-- BEGIN pool_row -->
-					        <option value="{pool_row.VALUE}" {pool_row.SELECTED}{pool_row.DISABLED}>{pool_row.OPTION}</option>
-					        <!-- END pool_row -->
-			    	  </select>
-			    	  </form> 
-					</div>
-				</div>
 
-			</div>
-		</div>
+<!-- IF S_HISTORY -->
+<h2>{L_MENU_ITEMHIST}</h2>
+<!-- ELSE -->
+<h2>{L_MENU_ITEMVAL}</h2>
+<!-- ENDIF -->
+
+
+<br />
+<div style="float: left; width:10%">
+		<h3>{L_POOL}:</h3>
+</div>
+<div style="float: left; width:45%">
+	<div style="color:white; text-align:left; white-space:nowrap;">
+		  <form method="post" action="{F_LISTITEM}">
+	    	  <select id="pool" name="pool" class="input" onchange="javascript:form.submit();" style="padding:1px;">
+			        <!-- BEGIN pool_row -->
+			        <option value="{pool_row.VALUE}" {pool_row.SELECTED}{pool_row.DISABLED}>{pool_row.OPTION}</option>
+			        <!-- END pool_row -->
+	    	  </select>
+    	  </form> 
 	</div>
+</div>
 
 <div class="forumbg forumbg-table">
 <div class="inner">
@@ -84,7 +78,7 @@
   <tbody>
   <!-- BEGIN items_row -->
   <tr <!-- IF items_row.S_ROW_COUNT is even -->class="bg1"<!-- ELSE -->class="bg2"<!-- ENDIF -->>
-    <td style="text-align:left; width:3%;"><a href="{items_row.U_VIEW_ITEM}"></a><img src="adm/images/glyphs/view.gif" width="16" height="16" alt="View" /></td>
+    <td style="text-align:left; width:3%;"><a href="{items_row.U_VIEW_ITEM}"><img src="adm/images/glyphs/view.gif" width="16" height="16" alt="View" /></a></td>
 	<td style="text-align:left; width:5%;"><a href="{raids_row.U_VIEW_RAID}">{items_row.DATE}</a></td>
     
     <!-- IF S_HISTORY -->
@@ -123,7 +117,3 @@
 <span class="corners-bottom"><span></span></span>
 </div>
 </div>
-
-</div>
-</div>
-

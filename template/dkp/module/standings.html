@@ -1,34 +1,29 @@
-<form method="post" action="{F_MEMBERS}">
 
-<div class="forumlist" >
-<div class="catglow">
-	<div class="cathead-m">	
-		<div class="cathead-r">
-			<div class="cathead-l">
-		<div style="float: left; width:20%">	{L_LISTMEMBERS_TITLE}</div>
-		<div style="float: left; width:40%">
-			<div style="text-align:right; white-space:nowrap;" >{L_POOL}:
-      		<select name="pool" class="input" onchange="javascript:form.submit();" style="padding:1px">
-        		<!-- BEGIN pool_row -->
-        		<option value="{pool_row.VALUE}"{pool_row.SELECTED}{pool_row.DISABLED}>{pool_row.OPTION}</option>
-		        <!-- END pool_row -->
-    		</select>
-			</div>
-		</div>
-		<div style="float: left; width:40%">
-			<div style="text-align:left; white-space:nowrap;">&nbsp;{L_FILTER}:
-    		  <select name="filter" class="input" onchange="javascript:form.submit();"  style="padding:1px">
-		        <!-- BEGIN filter_row -->
-		        <option value="{filter_row.VALUE}"{filter_row.SELECTED}{filter_row.DISABLED}>{filter_row.OPTION}</option>
-		        <!-- END filter_row -->
-		      </select>
-			</div>
-		</div>
+<h2>{L_LISTMEMBERS_TITLE}</h2>
+<br/>
+<form method="post" action="{F_MEMBERS}">	
 
-		</div>
-	</div>
+<div style="float: left; width:15%;"><h3>{L_POOL}:</h3></div>
+<div style="float: left; width:70%;">
+	<select name="pool" class="input" onchange="javascript:form.submit();" style="padding:1px">
+   		<!-- BEGIN pool_row -->
+       		<option value="{pool_row.VALUE}"{pool_row.SELECTED}{pool_row.DISABLED}>{pool_row.OPTION}</option>
+		<!-- END pool_row -->
+	</select>
 </div>
 
+<div style="clear: both;"></div>
+
+<div style="float: left; width:15%;"><h3>{L_FILTER}</h3></div>
+<div style="float: left; width:70%">
+	<select name="filter" class="input" onchange="javascript:form.submit();"  style="padding:1px">
+	        <!-- BEGIN filter_row -->
+	        <option value="{filter_row.VALUE}"{filter_row.SELECTED}{filter_row.DISABLED}>{filter_row.OPTION}</option>
+	        <!-- END filter_row -->
+	</select>
+</div>
+
+<br/>
 <!-- IF .members_row -->
  
 <!-- INCLUDE dkp/module/leaderboard.html -->
@@ -126,10 +121,6 @@
 
 
 <!-- ENDIF -->
-
-</div>
-</div>
-
 
 </form>
 

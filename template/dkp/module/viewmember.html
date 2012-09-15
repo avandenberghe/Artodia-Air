@@ -1,26 +1,23 @@
-<div class="forumlist" >
-<div class="catglow">
-	<div class="cathead-m">	
-		<div class="cathead-r">
-			<div class="cathead-l">
-			<div style="float: left; width:10%;">
-				<!-- IF S_RACE_IMAGE_EXISTS --><img src="{RACE_IMAGE}" alt="" />&nbsp;<!-- ELSE --><!-- ENDIF -->
-				<!-- IF S_CLASS_IMAGE_EXISTS --><img src="{CLASS_IMAGE}" alt="{CLASS}" /><!-- ELSE -->&nbsp;<!-- ENDIF -->
-			</div>
-			<div style="float: left; width:30%;">{NAME} &nbsp;</div>
-			<div style="text-align:center; float:left; width:10%; ">{L_POOL}:</div>
-			<div style="color:white; text-align:left; float:left; width:50%;">
-				<form method="post" action="{F_MEMBERS}">
-				<select name="pool" class="input" onchange="javascript:form.submit();" style="padding:1px" >
-			    <!-- BEGIN pool_row -->
-		        <option value="{pool_row.VALUE}"{pool_row.SELECTED}{pool_row.DISABLED}>{pool_row.OPTION}</option>
-		        <!-- END pool_row -->
-				</select>
-				</form>
-			</div>
-			</div>
-		</div>
-	</div>
+<br />
+	
+<h2>
+		<!-- IF S_RACE_IMAGE_EXISTS --><img src="{RACE_IMAGE}" alt="" />&nbsp;<!-- ELSE --><!-- ENDIF -->
+		<!-- IF S_CLASS_IMAGE_EXISTS --><img src="{CLASS_IMAGE}" alt="{CLASS}" /><!-- ELSE -->&nbsp;<!-- ENDIF -->
+		{NAME}
+</h2> 
+<br />	
+<div style="float: left; width:15%; white-space:nowrap;">
+<h3>{L_POOL}:</h3>
+</div>
+<div style="color:white; text-align:left; float:left; width:70%;">
+		<form method="post" action="{F_MEMBERS}">
+	 	<select name="pool" class="input" onchange="javascript:form.submit();" style="padding:1px" >
+	    <!-- BEGIN pool_row -->
+	    <option value="{pool_row.VALUE}"{pool_row.SELECTED}{pool_row.DISABLED}>{pool_row.OPTION}</option>
+	    <!-- END pool_row -->
+		</select>
+		</form>
+</div>
 
 <!-- IF ! S_SHOWEPGP -->
 <!--  non epgp classic dkp overview  -->
@@ -194,7 +191,7 @@
 
 
 <!-- ******* Attended Raids *************** -->
-
+<br />	
 <!-- IF .raids_row -->
 <h3>&nbsp;{L_RAID_ATTENDANCE_HISTORY}</h3>
 
@@ -258,7 +255,7 @@
 
 
 <!-- IF .items_row -->
-
+<br />	
 <h3>&nbsp;{L_ITEM_PURCHASE_HISTORY}</h3>
 
 <div class="forumbg forumbg-table">
@@ -311,7 +308,7 @@
 <!-- ENDIF -->
 
 <!-- IF .adjustments_row -->
-
+<br />	
 <h3>&nbsp;{L_INDIVIDUAL_ADJUSTMENT_HISTORY}</h3>
 <div class="forumbg forumbg-table">
 <div class="inner">
@@ -388,7 +385,3 @@
 </div>
 <!-- ENDIF -->
 
-
-
-</div>
-</div>

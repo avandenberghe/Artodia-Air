@@ -1,16 +1,4 @@
-<div class="forumlist" >
-<div class="catglow">
-	<div class="cathead-m">	
-		<div class="cathead-r">
-			<div class="cathead-l">
-				<!-- IF S_EVENT_IMAGE_EXISTS --><img src="{IMAGEPATH}" alt="{EVENTNAME}" /><!-- ENDIF --> {L_RAID_ON}
-			</div>
-		</div>			
-	</div>
-	</div>
-</div>
-
-<div class="post">
+<h2><!-- IF S_EVENT_IMAGE_EXISTS --><img src="{IMAGEPATH}" alt="{EVENTNAME}" /><!-- ENDIF --> {L_RAID_ON}</h2>
 
 <div>
 
@@ -20,13 +8,13 @@
 <span class="corners-top"><span></span></span>
 <table width="100%" border="0" cellspacing="0" cellpadding="0">
   <tr>
-    <td style="width:15%; white-space:nowrap; text-align:center;" class="bg1"><strong>{L_RAIDVALUE}</strong>: <span class="positive">{RAIDVALUE}</span></td>
+    <td style="width:15%; white-space:nowrap; " class="bg1"><strong>{L_RAIDVALUE}</strong>: <span class="positive">{RAIDVALUE}</span></td>
 
     <!-- IF S_SHOWTIME -->
-    <td style="width:15%; white-space:nowrap; text-align:center;" class="bg1"><strong>{L_TIME_BONUS}</strong>: <span class="positive">{TIMEVALUE}</span></td>
+    <td style="width:15%; white-space:nowrap; " class="bg1"><strong>{L_TIME_BONUS}</strong>: <span class="positive">{TIMEVALUE}</span></td>
     <!-- ENDIF -->
 
-    <td style="width:15%; white-space:nowrap; text-align:center;" class="bg1">
+    <td style="width:15%; white-space:nowrap; " class="bg1">
     <!-- IF S_SHOWZS -->
         <strong>{L_ZEROSUM}</strong>: <span class="positive">{ZSVALUE}</span>
     <!-- ENDIF -->
@@ -36,20 +24,20 @@
     </td>
 	<td class="bg1"></td>
     <!-- IF S_SHOWEPGP -->
-    <td style="width:18%; white-space:nowrap; text-align:center;" class="bg2"><h4><strong>Net {L_EARNED} {L_EP}</strong>: <span class="positive">{TOTAL}</span></h4></td>
+    <td style="width:18%; white-space:nowrap; " class="bg2"><h4><strong>Net {L_EARNED} {L_EP}</strong>: <span class="positive">{TOTAL}</span></h4></td>
     <!-- ELSE -->
-    <td style="width:18%; white-space:nowrap; text-align:center;" class="bg2"><h4><strong>{L_TOTAL} {L_EARNED} {L_DKP}</strong>: <span class="positive">{TOTAL}</span></h4></td>
+    <td style="width:18%; white-space:nowrap; " class="bg2"><h4><strong>{L_TOTAL} {L_EARNED} {L_DKP}</strong>: <span class="positive">{TOTAL}</span></h4></td>
   	<!-- ENDIF -->
 
 </tr>
 <tr>
-    <td style="width:18%; white-space:nowrap; text-align:center;" class="bg1"><strong>{L_SPENT}</strong>: <span class="negative">{ITEM_VALUE}</span></td>
+    <td style="width:18%; white-space:nowrap; " class="bg1"><strong>{L_SPENT}</strong>: <span class="negative">{ITEM_VALUE} </span></td>
     
     <!-- IF S_SHOWTIME -->
-    <td style="width:15%; white-space:nowrap; text-align:center;" class="bg1"></td>
+    <td style="width:15%; white-space:nowrap; " class="bg1"></td>
     <!-- ENDIF -->
     
-    <td style="width:15%; white-space:nowrap; text-align:center;" class="bg1">
+    <td style="width:15%; white-space:nowrap; " class="bg1">
     <!-- IF S_SHOWZS -->
         
 	<!-- ENDIF -->
@@ -57,9 +45,9 @@
    		<strong>{L_ITEMDECAY}</strong>: <span class="positive">{ITEMDECAYVALUE}</span>
 	<!-- ENDIF -->
 	</td>
-	
+	<td class="bg1"></td>
 		
-	<td style="width:18%; white-space:nowrap; text-align:center;" class="bg2">
+	<td style="width:18%; white-space:nowrap; " class="bg2">
 	<!-- IF S_EPGP -->
 	<h4><strong>{L_SPENT} </strong>: <span class="negative">{ITEMTOTAL}</span></h4>
 	<!-- ELSE -->
@@ -72,7 +60,7 @@
     <td class="bg1"></td>
     <td class="bg1"></td>
     <td class="bg1"></td>
-	<td style="width:18%; white-space:nowrap; text-align:center;" class="bg2">
+	<td style="width:18%; white-space:nowrap; " class="bg2">
     <h4><strong>{L_TOTAL}</strong>: <span class="negative">{RAIDNET}</span></h4>
 	</td>
 </tr>
@@ -106,6 +94,7 @@
 
 
 </table>
+
 <span class="corners-bottom"><span></span></span>
 </div>
 </div>
@@ -125,6 +114,7 @@
 
 </div>
 
+<br />
 <div style="clear: both;">
 
 <h3>{L_ATTENDEES}</h3>
@@ -239,10 +229,10 @@
 <!-- IF S_SHOWITEMPANE -->
 <br />
 <h3>{L_ITEMS}</h3>
+
 <div class="forumbg forumbg-table">
 <div class="inner">
 <span class="corners-inner-top"><span></span></span>
-
 <table class="table1"  cellspacing="1">
 <thead>
   <tr>
@@ -289,8 +279,7 @@
     <td style="text-align:right;" class="positive">{items_row.TOTAL}</td>
   </tr>
   <!-- END items_row -->
-  </tbody>
-
+</tbody>
 </table>
 <span class="corners-inner-bottom"><span></span></span>
 </div>
@@ -332,8 +321,6 @@
 </div>
 </div>
 
-
-</div>  
 
 
 
