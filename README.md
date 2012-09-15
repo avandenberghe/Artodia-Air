@@ -14,3 +14,10 @@ Modded for bbDKP
 *   Raidplanner 0.8
 *   Bossprogress 1.0.6
 
+**Screenshots**
+
+*Standings*
+![Imgur](http://i.imgur.com/Dkepe.png "Standings")
+
+*Raidplanner*
+![Imgur](http://i.imgur.com/dGnC3.png "Raidplanner")
