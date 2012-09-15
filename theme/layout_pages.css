@@ -21,6 +21,7 @@ div#message h2, #confirm h2, #agreement h2 {
 */
 #tabs {
     margin: 10px 0 6px;
+    height:25px;
 }
 #navigation, #minitabs {
     margin: 4px 0;

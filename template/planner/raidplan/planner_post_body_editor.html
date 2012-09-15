@@ -48,7 +48,7 @@ var ajaxalert = '{LA_ALERT_AJAX}';
 </div>
 
 <div id="message-box">
-	<textarea name="message" id="message" rows="10" cols="60" tabindex="3" onselect="storeCaret(this);" 
+	<textarea name="message" id="message" rows="10" cols="60" style="height: 100px;" tabindex="3" onselect="storeCaret(this);" 
 	onclick="storeCaret(this);" onkeyup="storeCaret(this);" class="inputbox">{MESSAGE}</textarea>
 </div>
 </fieldset>
@@ -57,27 +57,13 @@ var ajaxalert = '{LA_ALERT_AJAX}';
 <span class="corners-bottom"><span></span></span>
 </div>
 </div>
-
-<div id="tabs">
-	<ul>
-		<li id="raidinfo-panel-tab" class="activetab"><a href="#tabs" onclick="subPanels('raidinfo-panel'); return false;"><span style="padding-bottom: 7px;">
-		<img src="{T_IMAGESET_PATH}/planner/Locations.png" alt="{L_EVENT}" />
-		{L_RAIDINFO}</span></a></li>
-		<li id="raidroles-panel-tab"><a href="#tabs" onclick="subPanels('raidroles-panel'); return false;"><span style="padding-bottom: 7px;">
-		<img src="{T_IMAGESET_PATH}/planner/Resources.png" alt="{L_ATTENDANCE}"/>
-		{L_RAIDROLES}</span></a></li>
-		<li id="raidwhen-panel-tab"><a href="#tabs" onclick="subPanels('raidwhen-panel'); return false;"><span style="padding-bottom: 7px;">
-		<img src="{T_IMAGESET_PATH}/planner/watch.png"  alt="{L_TIME}" />
-		{L_RAIDWHEN}</span></a></li>
-	</ul>
-</div>
 		
-<div class="panel bg2" id="raidinfo-panel">
+<div class="panel bg2" >
 <div class="inner">
 <span class="corners-top"><span></span></span>
   <fieldset>
 
-   <h2>{L_RAIDINFO}</h2>
+   <h2>		<img src="{T_IMAGESET_PATH}/planner/Locations.png" alt="{L_EVENT}" />&nbsp;{L_RAIDINFO}</h2>
   	<br/>
 		<!-- fetch the event types from bbDKP -->
 	<dl style="clear: left;">
@@ -113,12 +99,12 @@ var ajaxalert = '{LA_ALERT_AJAX}';
 </div>
 </div>
 
-<div class="panel bg2" id="raidroles-panel" >
+<div class="panel bg2" >
 <div class="inner">
 <span class="corners-top"><span></span></span>
 
 <fieldset>
- <h2>{L_RAIDTEAM}</h2>
+ <h2><img src="{T_IMAGESET_PATH}/planner/Resources.png" alt="{L_ATTENDANCE}"/>&nbsp;{L_RAIDTEAM}</h2>
 		<dl>
 		<dt><label>{L_CHOOSETEAM}</label>  </dt>
 		<dd>
@@ -148,12 +134,12 @@ var ajaxalert = '{LA_ALERT_AJAX}';
 </div>
 </div> 
 
-<div class="panel bg2" id="raidwhen-panel">
+<div class="panel bg2">
 <div class="inner">
 <span class="corners-top"><span></span></span>
 
 <fieldset> 
-		<h2>{L_RAIDWHEN}</h2>
+		<h2><img src="{T_IMAGESET_PATH}/planner/watch.png"  alt="{L_TIME}" />&nbsp;{L_RAIDWHEN}</h2>
 	  
 		<dl style="clear: right;">
 			<dt><label for="calinvHr">{L_RAID_INVITE_TIME}:</label></dt>
