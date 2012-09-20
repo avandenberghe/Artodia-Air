@@ -17,7 +17,9 @@ Modded for bbDKP
 **Screenshots**
 
 *Standings*
+
 ![Imgur](http://i.imgur.com/Dkepe.png "Standings")
 
 *Raidplanner*
+
 ![Imgur](http://i.imgur.com/dGnC3.png "Raidplanner")
